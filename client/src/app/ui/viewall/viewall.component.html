@@ -1,0 +1,49 @@
+
+<div class="container">
+
+  <table class="table table-hover table-bordered" style="width:500px" align='center'>
+  <tr><td Colspan=2>
+      Task: <input type="text" [(ngModel)]="srchTask" id="input" class="form-control" value="" required="required" pattern="" title="">
+      </td><td Colspan=2>
+        Parent Task: <input type="text" [(ngModel)]="srchParentTask" id="input" class="form-control" value="" required="required" pattern="" title="">
+        </td></tr>
+        <tr><td>
+          Priority From: <input type="text" [(ngModel)]="srchPriorityFrom" id="input" class="form-control" value="" required="required" pattern="" title="">
+          </td><td>
+            Priority To: <input type="text" [(ngModel)]="srchPriorityTo" id="input" class="form-control" value="" required="required" pattern="" title="">
+            </td><td>
+            Start Date: <input type="text" [(ngModel)]="srchStartDate" id="input" class="form-control" value="" required="required" pattern="" title="">
+            </td><td>
+              End  Date: <input type="text" [(ngModel)]="srchEndDate" id="input" class="form-control" value="" required="required" pattern="" title="">
+              </td></tr>
+  </table>
+  
+  <table class="table table-hover table-bordered" style="width:500px" align='center'>
+    <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Priority</th>
+        <th>Parent Task</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+  
+    <tbody *ngFor="let item of list|taskNewfilter:srchTask:srchParentTask:srchPriorityFrom:srchPriorityTo:srchStartDate:srchEndDate">
+      <tr>
+        <td>{{item.Task_Name}}</td>
+        <td>{{item.Range}}</td>
+        <td>{{item.parentTaskName}}</td>
+        <td>{{item.Start_Date|date:'MM/dd/yyyy'}}</td>
+        <td>{{item.End_Date|date:'MM/dd/yyyy'}}</td>
+        <td>
+          <button class="btn btn-primary"  (click)='Modify(item.id)'>Edit</button></td>
+          <td><button class="btn btn-primary" (click)='Delete(item.id)'>End Task</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

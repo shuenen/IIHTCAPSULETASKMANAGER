@@ -1,0 +1,46 @@
+Delete from ParentTask
+
+Insert into ParentTask
+Values(1,'Parent Task1');
+
+Insert into ParentTask
+Values(2,'Parent Task2');
+
+Insert into ParentTask
+Values(3,'Parent Task3');
+
+Insert into ParentTask
+Values(4,'Parent Task4');
+
+Insert into ParentTask
+Values(5,'Parent Task5');
+
+Insert into TaskDetail
+Values(1,'Task 1',20,'02/02/2018','04/02/2019');
+
+Insert into TaskDetail
+Values(1,'Task 2',10,'02/02/2016','04/02/2018');
+
+Insert into TaskDetail
+Values(2,'Task 3',20,'02/02/2017','04/02/2019');
+
+Insert into TaskDetail
+Values(2,'Task 4',10,'02/02/2016','04/03/2018');
+
+Insert into TaskDetail
+Values(3,'Task 5',20,'02/02/2018','04/02/2019');
+
+Insert into TaskDetail
+Values(3,'Task 6',10,'02/02/2017','04/02/2018');
+
+Insert into TaskDetail
+Values(4,'Task 7',20,'02/02/2018','04/02/2019');
+
+Insert into TaskDetail
+Values(4,'Task 8',10,'02/02/2016','04/02/2018');
+
+Insert into TaskDetail
+Values(5,'Task 9',20,'02/02/2018','04/02/2019');
+
+Insert into TaskDetail
+Values(5,'Task 11',70,'02/02/2016','04/02/2018');

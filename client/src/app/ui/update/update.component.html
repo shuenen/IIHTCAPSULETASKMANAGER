@@ -1,0 +1,41 @@
+
+<div class="container">
+  <table class="table table-bordered" style="width:400px" align="center">
+    <tr>
+      <td>Task Name</td>
+      <td>
+      <input type="text" [(ngModel)]="item.Task_Name" id="input" class="form-control" value="" required="required" pattern="" title="">
+      </td>
+    </tr>
+    <tr>
+      <td>Parent Task</td>
+      <td>
+      <input type="text" [(ngModel)]="item.Parent_Id" id="input" class="form-control" value="" required="required" pattern="" title="">
+      </td>
+    </tr>
+    <tr>
+      <td>Priority</td>
+      <td>
+      <input type="range" [(ngModel)]="item.Range" min="1" max="100" value="50" class="slider" id="myRange">
+      </td>
+    </tr>
+    <tr>
+      <td>Start Date</td>
+      <td>
+      <input type="text" [(ngModel)]="item.Start_Date" id="input" class="form-control" value="" required="required" pattern="" title="">
+      </td>
+    </tr>
+    <tr>
+      <td>End Date</td>
+      <td>
+      <input type="text" [(ngModel)]="item.End_Date" id="input" class="form-control" value="" required="required" pattern="" title="">
+      </td>
+    </tr>
+  <tr>
+    <td colspan="2"><button (click)='Update()'>Update</button></td>
+  </tr>
+  </table>
+  </div>
+  {{res}}
+  
+  

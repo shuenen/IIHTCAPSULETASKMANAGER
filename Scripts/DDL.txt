@@ -1,0 +1,48 @@
+USE [Capsule]
+GO
+
+/****** Object:  Table [dbo].[TaskDetail]    Script Date: 1/18/2019 6:45:01 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TaskDetail](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Parent_Id] [int] NULL,
+	[Task_Name] [varchar](50) NULL,
+	[Range] [int] NULL,
+	[Start_Date] [date] NULL,
+	[End_Date] [date] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [Capsule]
+GO
+
+/****** Object:  Table [dbo].[ParentTask]    Script Date: 1/18/2019 6:45:43 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ParentTask](
+	[Parent_Id] [int] NOT NULL,
+	[Parent_Task_Name] [varchar](50) NULL,
+ CONSTRAINT [PK_ParentTask] PRIMARY KEY CLUSTERED 
+(
+	[Parent_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
